@@ -1,7 +1,50 @@
-body{
-    background-color: #f1f1f1;
+@import 'common';
 
-    .inner{
-        display: flex;
+#wrap{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .toolbar{
+        height: 10px;
+        flex-shrink: 0;
+        background-color: $primary-color-dark;
     }
+
+    .header{
+        height: 40px;
+        flex-shrink: 0;
+        background-color: $primary-color;
+        color: $primary-color-text;
+        text-align: center;
+    }
+
+    .content{
+        flex-grow: 1;
+        padding: 15px;
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+        overflow: {
+            x: hidden;
+            y: auto;
+        }
+
+        p{
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .footer{
+        flex-basis: 80px;
+        flex-shrink: 0;
+        background-color: $primary-color;
+        color: $primary-color-text;
+        text-align: center;
+    }
+
 }
