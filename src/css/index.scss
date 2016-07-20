@@ -1,5 +1,77 @@
 @import 'common';
 
+#menu-wrap{
+    // width: 100%;
+    // height: 100vh;
+    // position: fixed;
+   
+    .menu-bg{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 9;
+        display: none;
+    }
+
+    .menu{
+        width: 80%;
+        height: 100vh;
+        background-color: #FFF;
+        position: fixed;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        transform: translate3d(-100%,0,0);
+        transition: transform 0.3s;
+
+        &.menushow{
+            transform: translate3d(0,0,0);
+        }
+
+        .menu-userinfo{
+            width: 100%;
+            height: 80px;
+            flex-shrink: 0;
+            background-color: $primary-color-dark;
+        }
+
+        .menu-content{
+            flex-grow: 1;
+        }
+
+        .logout{
+            width: 100%;
+            height: 60px;
+            flex-shrink: 0;
+            background-color: $primary-color;
+            color: $primary-color-text;
+            line-height: 60px;
+            text-align: center;
+        }
+    }
+
+    
+
+
+    // a{
+    //     color: #fff;
+    //     flex: 1;
+    //     padding: 8px;
+    //     font-size: 14px;
+    //     border-right: 1px solid $primary-color-dark;
+    //     &:last-child{
+    //         border: 0;
+    //     }
+
+    //     i{
+    //         display: block;
+    //         font-size: 25px;
+    //         text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+    //     }
+    // }
+}
+
 #wrap{
     display: flex;
     flex-direction: column;
@@ -12,16 +84,30 @@
     }
 
     .header{
-        height: 40px;
+        display: flex;
+        height: 50px;
+        padding: 10px;
         flex-shrink: 0;
         background-color: $primary-color;
         color: $primary-color-text;
         text-align: center;
+        align-items: center;
+        justify-content: space-between;
+
+        .icons{
+            font-size: 16px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1)
+        }
+        div:last-child{
+            padding-left: 10px;
+        }
+      
     }
 
     .content{
         flex-grow: 1;
         padding: 15px;
+        background-color: #f4f4f4;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
         overflow: {
@@ -38,13 +124,4 @@
             max-width: 100%;
         }
     }
-
-    .footer{
-        flex-basis: 80px;
-        flex-shrink: 0;
-        background-color: $primary-color;
-        color: $primary-color-text;
-        text-align: center;
-    }
-
 }

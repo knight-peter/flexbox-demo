@@ -4,14 +4,15 @@
   "description": "flexbox-demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp browserSync"
   },
-  "author": "",
+  "author": "zen",
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.13.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.11",
     "gulp-imagemin": "^3.0.1",
