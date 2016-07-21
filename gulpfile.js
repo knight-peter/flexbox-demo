@@ -34,7 +34,7 @@ gulp.task('compress', function (cb) {
         gulp.dest('dist/js')
     ],
     cb
-  );
+  ).pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('imagemin', function(){

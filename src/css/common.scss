@@ -31,8 +31,12 @@
         .menu-userinfo{
             width: 100%;
             height: 80px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
             flex-shrink: 0;
             background-color: $primary-color-dark;
+            color: $primary-color-text;
         }
 
         .menu-content{
