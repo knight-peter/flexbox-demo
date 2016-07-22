@@ -4,7 +4,7 @@
   "description": "flexbox-demo",
   "main": "index.js",
   "scripts": {
-    "start": "gulp browserSync"
+    "start": "gulp"
   },
   "author": "zen",
   "license": "ISC",

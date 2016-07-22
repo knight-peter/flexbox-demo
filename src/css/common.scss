@@ -37,6 +37,26 @@
             flex-shrink: 0;
             background-color: $primary-color-dark;
             color: $primary-color-text;
+
+            .user-head{
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                border: 1px solid #fff;
+                margin-right: 15px;
+                overflow: hidden;
+
+                img{
+                    max-width: 100%;
+                    border-radius: 100%;
+                }
+            }
+
+            p:last-child{
+                color: $primary-color-light;
+                font-size: 12px;
+                margin-top: 10px;
+            }
         }
 
         .menu-content{
@@ -53,12 +73,17 @@
                 color: $secondary-text-color;
                 padding: 15px;
                 border-bottom: 1px solid #e5e5e5;
+                text-align: justify;
             }
 
             i{
+                display: inline-block;
+                width: 26px;
+                text-align: center;
                 padding-right: 10px;
                 color: $primary-color;
                 font-size: 16px;
+                text-shadow: 1px 1px 2px $primary-color-light;
             }
         }
 
@@ -103,22 +128,12 @@
 
     .content{
         flex-grow: 1;
-        padding: 15px;
         background-color: #f4f4f4;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
         overflow: {
             x: hidden;
             y: auto;
-        }
-
-        p{
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        img{
-            max-width: 100%;
         }
     }
 }
